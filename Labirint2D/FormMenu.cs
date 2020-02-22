@@ -41,6 +41,7 @@ namespace Labirint2D
         private void buttonEnter_Click(object sender, EventArgs e)
         {
             Sound.playStart();
+
         }
     }
 }
