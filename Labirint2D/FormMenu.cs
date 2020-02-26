@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Labirint2D
@@ -40,8 +33,20 @@ namespace Labirint2D
 
         private void buttonEnter_Click(object sender, EventArgs e)
         {
-            Sound.playStart();
+            StartLevel1();
+        }
+        
+        private void StartLevel1()
+        {
+            FormLevel1 level1 = new FormLevel1();
+            DialogResult dr = level1.ShowDialog();
+            if (dr == DialogResult.OK)
+                StartLevel2();
+        }
 
+        private void StartLevel2()
+        {
+            throw new NotImplementedException();
         }
     }
 }
